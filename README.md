@@ -1,5 +1,5 @@
 
-|List of topics covered in this note
+> List of topics covered in this note
 
 - Kafka
 - Git
