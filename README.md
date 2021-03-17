@@ -1,4 +1,10 @@
 
+| List of topics covered in this note
+
+- Kafka
+- Git
+
+
 <details><summary> Kafka </summary>
 
 
