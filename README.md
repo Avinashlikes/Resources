@@ -1,11 +1,4 @@
-
-> List of topics covered in this note
-
-- Kafka
-- Git
-- SSH
-- SCP
-- SSH Agent Forwarding
+> # Following Topics Covered
 
 <details><summary> Kafka </summary>
 
@@ -23,7 +16,7 @@
  
  > This repository has the GIT commands for day to day work
 
-[Command List](https://github.com/Avinashlikes/Resources/blob/master/GIT.md)
+[GIT Commands](https://github.com/Avinashlikes/Resources/blob/master/GIT.md)
  </details>
 
 <details><summary> SSH </summary>
