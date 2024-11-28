@@ -4,6 +4,7 @@
 - Kafka
 - Git
 - SSH
+- SCP
 
 
 <details><summary> Kafka </summary>
@@ -32,6 +33,13 @@
 > This repository has the complete code related to SSH for day to day work
 
 - [SSH Commands](https://github.com/Avinashlikes/Resources/blob/master/SSH.md)
+
+</details>
+<details><summary> SCP </summary>
+
+> This repository has the SCP commands for day to day work
+
+- [SCP Command](https://github.com/Avinashlikes/Resources/blob/master/SCP.md)
 
 </details>
  
