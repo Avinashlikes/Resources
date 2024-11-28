@@ -27,7 +27,7 @@
 
 > This repository has the list of commands for day to day work
 
-- [Command List](https://github.com/Avinashlikes/Resources/blob/master/Ssh_Command_lists.md)
+- [Command List](https://github.com/Avinashlikes/Resources/blob/master/Ssh_Command_Lists.md)
 
 > This repository has the complete code related to SSH for day to day work
 
