@@ -1,18 +1,18 @@
 # Enabling SSL in Kafka
 
-- Follow the below steps for enabling SSL in your local environment
+>  Follow the below steps for enabling SSL in your local environment
 
 ## Generating the KeyStore
 
-- The below command is to generate the **keyStore**.
-- KeyStore in general has information about the server and the organization
+> - The below command is to generate the **keyStore**.
+> - KeyStore in general has information about the server and the organization
 
 ```
 keytool -keystore server.keystore.jks -alias localhost -validity 365 -genkey -keyalg RSA
 ```
 
 **Example**  
-- After entering all the details the final value will look like below.
+> After entering all the details the final value will look like below.
 
 ```
 CN=localhost, OU=localhost, O=localhost, L=Chennai, ST=TN, C=IN
@@ -20,7 +20,7 @@ CN=localhost, OU=localhost, O=localhost, L=Chennai, ST=TN, C=IN
 
 ## Generating CA
 
-- The below command will generate the ca cert(SSL cert) and private key. This is normally needed if we are self signing the request.
+> The below command will generate the ca cert(SSL cert) and private key. This is normally needed if we are self signing the request.
 
 ```
 openssl req -new -x509 -keyout ca-key -out ca-cert -days 365 -subj "/CN=local-security-CA"
@@ -28,7 +28,7 @@ openssl req -new -x509 -keyout ca-key -out ca-cert -days 365 -subj "/CN=local-se
 
 ## Certificate Signing Request(CSR)
 
-- The below command will create a **cert-file** as a result of executing the command.
+> The below command will create a **cert-file** as a result of executing the command.
 
 ```
 keytool -keystore server.keystore.jks -alias localhost -certreq -file cert-file
@@ -36,13 +36,13 @@ keytool -keystore server.keystore.jks -alias localhost -certreq -file cert-file
 
 ## Signing the certificate
 
-- The below command takes care of signing the CSR and then it spits out a file **cert-signed**
+> The below command takes care of signing the CSR and then it spits out a file **cert-signed**
 
 ```
 openssl x509 -req -CA ca-cert -CAkey ca-key -in cert-file -out cert-signed -days 365 -CAcreateserial -passin pass:password
 ```
 
-- To view the content inside the file **cert-signed**, run the below command.
+> To view the content inside the file **cert-signed**, run the below command.
 
 ```
 keytool -printcert -v -file cert-signed
@@ -58,8 +58,8 @@ keytool -keystore server.keystore.jks -alias localhost -import -file cert-signed
 
 ## Generate the TrustStore
 
-- The below command takes care of generating the truststore for us and adds the **CA-Cert** in to it.
-- This is to make sure the client is going to trust all the certs issued by CA.
+> - The below command takes care of generating the truststore for us and adds the **CA-Cert** in to it.
+> - This is to make sure the client is going to trust all the certs issued by CA.
 
 ```
 keytool -keystore client.truststore.jks -alias CARoot -import -file ca-cert
@@ -75,13 +75,13 @@ ssl.endpoint.identification.algorithm=
 ```
 # Accessing SSL Enabled Topics using Console Producers/Consumers
 
-- Create a topic
+> Create a topic
 
 ```
 ./kafka-topics.sh --create --topic test-topic -zookeeper localhost:2181 --replication-factor 1 --partitions 3
 ```
 
-- Create a file named **client-ssl.properties** and have the below properties configured in there.
+> Create a file named **client-ssl.properties** and have the below properties configured in there.
 
 ```
 security.protocol=SSL
@@ -92,7 +92,7 @@ ssl.truststore.type=JKS
 
 ## Producing Messages to Secured Topic
 
-- Command to Produce Messages to the secured topic
+> Command to Produce Messages to the secured topic
 
 ```
 ./kafka-console-producer.sh --broker-list localhost:9095,localhost:9096,localhost:9097 --topic test-topic --producer.config client-ssl.properties
@@ -100,7 +100,7 @@ ssl.truststore.type=JKS
 
 ## Consuming Messages from a Secured Topic
 
-- Command to Produce Messages to the secured topic
+> Command to Produce Messages to the secured topic
 
 ```
 ./kafka-console-consumer.sh --bootstrap-server localhost:9095,localhost:9096,localhost:9097 --topic test-topic --consumer.config client-ssl.properties
@@ -122,20 +122,20 @@ ssl.truststore.type=JKS
 
 ## 2 Way Authentication
 
-- This config is to enable the client authentication at the cluster end.
+> This config is to enable the client authentication at the cluster end.
 
 ```
 keytool -keystore server.truststore.jks -alias CARoot -import -file ca-cert
 ```
 
-- Add the **ssl.client.auth** property in the **server.properties**.
+> Add the **ssl.client.auth** property in the **server.properties**.
 
 ```
 ssl.truststore.location=<location>/server.truststore.jks
 ssl.truststore.password=password
 ssl.client.auth=required
 ```
-- Kafka Client should have the following the config in the **client-ssl.properties** file
+> Kafka Client should have the following the config in the **client-ssl.properties** file
 
 ```
 ssl.keystore.type=JKS
