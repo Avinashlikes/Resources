@@ -22,6 +22,9 @@
 </details>
 
 <details> <summary> GIT </summary>
+ > This repository has the GIT commands for day to day work
+
+- [Command List](https://github.com/Avinashlikes/Resources/blob/master/GIT.md)
  </details>
 
 <details><summary> SSH </summary>
