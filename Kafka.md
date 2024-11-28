@@ -7,13 +7,13 @@
 
 ## Start Zookeeper and Kafka Broker
 
-?   Start up the Zookeeper.
+> Start up the Zookeeper.
 
 ```
 ./zookeeper-server-start.sh ../config/zookeeper.properties
 ```
 
-? Add the below properties in the server.properties
+> Add the below properties in the server.properties
 
 ```
 listeners=PLAINTEXT://localhost:9092
@@ -76,7 +76,7 @@ auto.create.topics.enable=false
 
 ## Start Zookeeper and Kafka Broker
 
->   Start up the Zookeeper.
+> Start up the Zookeeper.
 
 ```
 zookeeper-server-start.bat ..\..\config\zookeeper.properties
@@ -154,7 +154,7 @@ auto.create.topics.enable=false
 
 ### Starting up the new Broker
 
-- Provide the new **server.properties** thats added.
+> Provide the new **server.properties** thats added.
 
 ```
 ./kafka-server-start.sh ../config/server-1.properties
@@ -177,13 +177,12 @@ auto.create.topics.enable=false
 
 ## Describe topic
 
-- The below command can be used to describe all the topics.
+> The below command can be used to describe all the topics.
 
 ```
 ./kafka-topics.sh --zookeeper localhost:2181 --describe
 ```
-
-- The below command can be used to describe a specific topic.
+> The below command can be used to describe a specific topic.
 
 ```
 ./kafka-topics.sh --zookeeper localhost:2181 --describe --topic <topic-name>
@@ -229,7 +228,7 @@ auto.create.topics.enable=false
 <details><summary>Windows</summary>
 <p>
 
-- Make sure you are inside the **bin/windows** directory.
+> Make sure you are inside the **bin/windows** directory.
 
 ## List the topics in a cluster
 
@@ -239,13 +238,13 @@ kafka-topics.bat --zookeeper localhost:2181 --list
 
 ## Describe topic
 
-- The below command can be used to describe all the topics.
+> The below command can be used to describe all the topics.
 
 ```
 kafka-topics.bat --zookeeper localhost:2181 --describe
 ```
 
-- The below command can be used to describe a specific topic.
+> The below command can be used to describe a specific topic.
 
 ```
 kafka-topics.bat --zookeeper localhost:2181 --describe --topic <topic-name>
