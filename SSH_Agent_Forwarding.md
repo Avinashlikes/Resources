@@ -1,6 +1,6 @@
 ### SSH Agent Forwarding
 
-It is used when we are connecting a bastion box/dial box and further to a box. here to connect to private instance from dial box and hence, needed private key further to connect and so, needed to upload the key in dial box. This is having security threat if someone compromise the box then all the keys gone. so the solution for this is ssh agent forwarding. takeaway from these step
+>It is used when we are connecting a bastion box/dial box and further to a box. here to connect to private instance from dial box and hence, needed private key further to connect and so, needed to upload the key in dial box. This is having security threat if someone compromise the box then all the keys gone. so the solution for this is ssh agent forwarding. takeaway from these step
 
 <details><summary> Add key in Key-Chain</summary>
 
