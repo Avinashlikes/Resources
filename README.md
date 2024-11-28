@@ -3,6 +3,7 @@
 
 - Kafka
 - Git
+- SSH
 
 
 <details><summary> Kafka </summary>
@@ -20,6 +21,14 @@
 </details>
 
 <details> <summary> GIT </summary>
- 
- 
+ </details>
+
+<details><summary> SSH </summary>
+
+> This repository has the complete code related to SSH for day to day work
+
+- [SSH Commands](https://github.com/Avinashlikes/Resources/blob/master/SSH.md)
+
 </details>
+ 
+ 
