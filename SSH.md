@@ -9,13 +9,13 @@
 - Download your Key.pem & Change the mode by running this command at the file location 
 
 ```
-chmod 400 Key.pem
+  chmod 400 Key.pem
 ```
 
 - Write this command to connect your Linux machine from your local
 
 ```
-SSH -i Key.pem User@192.168.1.2
+  ssh -i Key.pem User@192.168.1.2
 ```
 
 </p>
