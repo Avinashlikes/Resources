@@ -1,4 +1,5 @@
-> ## SCP (Secure Copy Protocol) is a network protocol that securely copies files/folders between Linux (Unix) systems on a network. To transmit, use the scp command line utility, a safer variant of the cp (copy) command.
+## SCP 
+> SCP (Secure Copy Protocol) is a network protocol that securely copies files/folders between Linux (Unix) systems on a network. To transmit, use the scp command line utility, a safer variant of the cp (copy) command.
 
 ##### Use the SCP command in the following cases 
 <details><summary> Copying files from a local host to a remote host. </summary>
