@@ -89,8 +89,14 @@ kafka-server-start.bat ..\..\config\server.properties
 
 ## How to create a topic ?
 
+>old way (depricated) 
 ```
 kafka-topics.bat --create --topic test-topic -zookeeper localhost:2181 --replication-factor 1 --partitions 4
+```
+>new way
+Note: zookeeper runs on 2181 , however, kafka runs on 9092 
+```
+kafka-topics.bat --create --topic test-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 4
 ```
 
 ## How to instantiate a Console Producer?
