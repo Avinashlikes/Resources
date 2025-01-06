@@ -1,4 +1,10 @@
 > # Following Topics Covered
+<details> <summary> Dotnet Command For WebAPI sample </summary>
+ 
+ > This repository has the GIT commands for day-to-day work
+
+[Dotnet Commands](https://github.com/Avinashlikes/Resources/blob/master/DotnetProjectUsingCommand.md)
+ </details>
 
 <details><summary> Kafka </summary>
 
