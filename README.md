@@ -7,7 +7,12 @@
 
  > This repository has EF integration in Dotnet Core API
 
-  [Dotnet Commands](https://github.com/Avinashlikes/Resources/blob/master/EF_Integration_DotnetCore.md)
+  [Commands](https://github.com/Avinashlikes/Resources/blob/master/EF_Integration_DotnetCore.md)
+
+ > This is note for dotnet core api
+
+  [Notes](https://github.com/Avinashlikes/Resources/blob/master/DotnetCoreAPI.md)
+
  
  </details>
 
