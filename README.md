@@ -3,7 +3,12 @@
  
  > This repository has the Dotnet Command For WebAPI sample for day-to-day work
 
-[Dotnet Commands](https://github.com/Avinashlikes/Resources/blob/master/DotnetProjectUsingCommand.md)
+  [Dotnet Commands](https://github.com/Avinashlikes/Resources/blob/master/DotnetProjectUsingCommand.md)
+
+ > This repository has EF integration in Dotnet Core API
+
+  [Dotnet Commands](https://github.com/Avinashlikes/Resources/blob/master/EF_Integration_DotnetCore.md)
+ 
  </details>
 
 <details><summary> Kafka </summary>
