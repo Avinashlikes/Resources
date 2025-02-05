@@ -1,4 +1,4 @@
-> # Following Topics Covered
+> # These are the Topics Covered 
 <details> <summary> Dotnet Command </summary>
  
  > This repository has the Dotnet Command For WebAPI sample for day-to-day work
